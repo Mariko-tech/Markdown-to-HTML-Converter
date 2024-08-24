@@ -24,7 +24,7 @@ def main():
         contents = input_f.read()
 
     if use_method == "markdown":
-        new_contents = markdown.markdown(contents)
+        new_contents = markdown.markdown(contents, extensions=['extra', 'tables'])
 
     with open(output_file, 'w') as output_f:
         output_f.write(new_contents)
